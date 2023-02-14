@@ -99,6 +99,17 @@ h3 {
     float: left
 }
 
+
+.grid img:hover {
+    border: 15px solid;
+    border-image: linear-gradient(#f9dcc4, #c56f6f) 30;
+    margin-right: 10px;
+    border-radius: 20px;
+    width: 50%;
+    border-radius: 10px;
+    padding: auto;
+}
+
 .grid {
     display: grid;
     grid-template-rows: auto;

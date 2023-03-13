@@ -2,6 +2,7 @@ body {
     line-height: 200%;
     background-color: #F8EDE3;
     margin: 30px 50px;
+    background-image: url("../images/background.webp")
 }
 
 
@@ -13,15 +14,30 @@ header {
     /* Set padding and margin */
 }
 
+@keyframes example {
+    from {
+        background-color: #695353;
+    }
+
+    to {
+        background-color: #FCE4C3;
+    }
+}
+
 nav ul {
-    background-color: #957b58
+    /* background-color: #957b58; */
+    width: 100%;
 }
 
 nav li {
     /* Set display, margin, padding, font-size, background-color */
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* margin: 10px; */
+    border: #dd9d9d solid 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 15px;
     background-color: #FCE4C3
 }
@@ -31,6 +47,10 @@ nav a {
     text-decoration: none;
 }
 
+.fa {
+    color: #695353;
+}
+
 a:visited {
     /* Set color */
     color: #000000;
@@ -38,10 +58,11 @@ a:visited {
 
 nav a.current {
     /* Set text decoration, transformation, and underline properties */
-    text-decoration-line: underline;
+    /* text-decoration-line: underline;
     text-decoration-style: wavy;
     text-transform: uppercase;
-    text-underline-offset: 5px
+    text-underline-offset: 5px */
+    color: #c56f6f
 }
 
 @import url(https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap);
@@ -52,7 +73,7 @@ h1 {
     font-size: 40px;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif;
     align-items: center;
-
+    line-height: 150%;
 
 }
 
@@ -60,7 +81,6 @@ h2 {
     /*Set font, font size, and alignment*/
     font-size: 20px;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif;
-    align-items: center;
 }
 
 h3 {
@@ -77,44 +97,55 @@ h3 {
 }
 
 
+
 .grid h2 {
     display: inline;
     font-size: 20px;
+
+    animation-duration: 3s;
     text-transform: capitalize;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif
 }
 
+
 .grid h3 {
-    font-size: 20px;
+    font-size: 15px;
     text-transform: capitalize;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif;
     margin-top: 0px;
-
+    text-decoration-line: underline;
 }
 
-.grid img {
-    width: 50%;
-    padding: auto;
-    margin-right: 10px;
-    float: left
+@media (prefers-reduced-motion) {
+    .grid img {
+        width: 50%;
+        padding: auto;
+        margin-right: 10px;
+        float: left;
+        transition: transform .2s;
+
+    }
 }
 
 
-.grid img:hover {
-    border: 15px solid;
-    border-image: linear-gradient(#f9dcc4, #c56f6f) 30;
-    margin-right: 10px;
-    border-radius: 20px;
-    width: 50%;
-    border-radius: 10px;
-    padding: auto;
+@media (prefers-reduced-motion) {
+    .grid img:hover {
+        border: 10px solid;
+        border-image: linear-gradient(#f9dcc4, #c56f6f) 10;
+        margin-right: 10px;
+        border-radius: 20px;
+        width: 50%;
+        border-radius: 10px;
+        padding: auto;
+        transform: scale(1.05)
+    }
 }
 
 .grid {
     display: grid;
     grid-template-rows: auto;
     row-gap: 30px;
-    padding: 20px;
+    width: 100%;
 
 }
 
@@ -123,7 +154,7 @@ h3 {
 }
 
 .grid p {
-    font-size: 8px;
+    font-size: 12px;
     display: inline;
 
 }
@@ -138,14 +169,18 @@ h3 {
     /* list-style-image: url('../images/sketchbook.png') */
 }
 
-.grid div:nth-child(3n+1) {
-    /* Set box shadow */
-    /* box-shadow: 10px 0px 5px #A8A9A9; */
-}
+/* .grid div:nth-child(2n-1) {
+    border: 8px solid;
+    border-image: #a88467 30;
+    margin-right: 10px;
+    border-radius: 20px;
+    width: 50%;
+    border-radius: 10px;
+    padding: auto;
+} */
 
-.grid div:nth-child(3n) {
-    /* Set box shadow */
-    /* box-shadow: -10px 0px 5px #A8A9A9; */
+.grid div:nth-child(2n-1) {
+    background-color: #e2dcdc;
 }
 
 .grid div:nth-child(3n+2) {
@@ -165,7 +200,7 @@ p+p {
 p {
     /* Set margin */
     /* margin: 2px 0px 0px 10px; */
-    font-size: 3px;
+    font-size: 13px;
     line-height: 1.5;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif
 }
@@ -186,8 +221,8 @@ dd {
 }
 
 img {
-    border: 15px solid;
-    border-image: linear-gradient(#a49d9d, #814a4a) 30;
+    border: 10px solid;
+    border-image: linear-gradient(#a49d9d, #695353) 30;
     border-radius: 20px;
     margin: auto;
     width: 100%;
@@ -195,12 +230,11 @@ img {
 }
 
 img:hover {
-    border: 15px solid;
+    border: 10px solid;
     border-image: linear-gradient(#f9dcc4, #c56f6f) 30;
     margin: auto;
     border-radius: 20px;
     width: 100%;
-    border-radius: 10px;
     padding: 5px;
 }
 

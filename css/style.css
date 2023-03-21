@@ -14,45 +14,75 @@ header {
     /* Set padding and margin */
 }
 
-@keyframes example {
-    from {
-        background-color: #695353;
-    }
+.skip {
+    background-color: #f4cbcb;
+    text-decoration: underline;
 
-    to {
-        background-color: #FCE4C3;
-    }
 }
 
+
 nav ul {
-    /* background-color: #957b58; */
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F1EEF6;
+}
+
+@media screen and (min-width:800px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 }
 
 nav li {
     /* Set display, margin, padding, font-size, background-color */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    /* margin: 10px; */
     border: #dd9d9d solid 3px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 15px;
+    margin-top: .3em;
+    margin-bottom: .3em;
+    font-size: 1.5em;
     background-color: #FCE4C3
 }
+
+@media screen and (min-width:800px) {
+    nav li {
+        border: #dd9d9d solid 3px;
+        margin-top: .3em;
+        margin-bottom: .3em;
+        font-size: 2em;
+        background-color: #FCE4C3;
+    }
+
+}
+
 
 nav a {
     /* Set text decoration*/
     text-decoration: none;
+    font-size: .8em;
+    vertical-align: baseline;
+}
+
+@media screen and (min-width:800px) {
+    nav a {
+        /* Set text decoration*/
+        text-decoration: none;
+        font-size: .6em;
+        vertical-align: baseline;
+    }
 }
 
 .fa {
     color: #695353;
+    vertical-align: middle;
 }
 
+
+
 a:visited {
-    /* Set color */
     color: #000000;
 }
 
@@ -70,7 +100,7 @@ nav a.current {
 
 h1 {
     /*Set font and font size*/
-    font-size: 40px;
+    font-size: 3.5em;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif;
     align-items: center;
     line-height: 150%;
@@ -79,13 +109,13 @@ h1 {
 
 h2 {
     /*Set font, font size, and alignment*/
-    font-size: 20px;
+    font-size: 2em;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif;
 }
 
 h3 {
     /*Set font size*/
-    font-size: 10px;
+    font-size: 1em;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif
 }
 
@@ -100,20 +130,20 @@ h3 {
 
 .grid h2 {
     display: inline;
-    font-size: 20px;
-
+    font-size: 2em;
     animation-duration: 3s;
     text-transform: capitalize;
-    font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif
+    font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif;
 }
 
 
 .grid h3 {
-    font-size: 15px;
+    font-size: 1em;
     text-transform: capitalize;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif;
     margin-top: 0px;
     text-decoration-line: underline;
+    float: left
 }
 
 @media (prefers-reduced-motion) {
@@ -123,7 +153,6 @@ h3 {
         margin-right: 10px;
         float: left;
         transition: transform .2s;
-
     }
 }
 
@@ -141,22 +170,24 @@ h3 {
     }
 }
 
-.grid {
+/* .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    width: 100%;
+
+} */
+
+.grid div {
     display: grid;
     grid-template-rows: auto;
     row-gap: 30px;
     width: 100%;
-
 }
 
-.grid div {
-    padding: auto;
-}
-
-.grid p {
-    font-size: 12px;
-    display: inline;
-
+.grid div p {
+    font-size: 1em;
+    align-items: inline;
 }
 
 .grid ul li {
@@ -183,13 +214,11 @@ h3 {
     background-color: #e2dcdc;
 }
 
-.grid div:nth-child(3n+2) {
+/* .grid div:nth-child(3n+2) {
     /* Set box shadow */
 
-    /* box-shadow: 10px 0px 5px #A8A9A9, -10px 0px 5px #A8A9A9; */
+/* box-shadow: 10px 0px 5px #A8A9A9, -10px 0px 5px #A8A9A9;} */
 
-
-}
 
 
 p+p {
@@ -206,17 +235,21 @@ p {
 }
 
 
+dt,
+dd {
+    /*Set margin */
+    margin-top: 1em;
+}
 
 
 dt {
+    text-decoration: underline;
     font-size: 30px;
-    margin: 2px 0px 0px 10px;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif;
 }
 
 dd {
     font-size: 20px;
-    margin: 2px 0px 0px 10px;
     font-family: 'Merriweather', 'Anton', 'Times New Roman', Times, serif;
 }
 
@@ -227,6 +260,7 @@ img {
     margin: auto;
     width: 100%;
     padding: 5px;
+    float: left
 }
 
 img:hover {
@@ -236,9 +270,74 @@ img:hover {
     border-radius: 20px;
     width: 100%;
     padding: 5px;
+
 }
 
-a:hover {
+/* a:hover {
     background-color: white;
     color: black;
+} */
+
+.container {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.filterDiv:hover {
+    background-color: #939393;
+    border: 1em #666;
+}
+
+/* Add a dark background to the active button */
+.filterDiv.active {
+    font-size: 1em;
+    color: rgb(202, 199, 199);
+}
+
+.filterDiv {
+    float: left;
+    background-color: #c56f6f;
+    color: #ffffff;
+    width: auto;
+    line-height: 2em;
+    text-align: center;
+    padding: 1em;
+    margin: .2em;
+    display: none;
+    /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+
+/* Style the buttons */
+.btn {
+    font-size: 1em;
+    border: none;
+    outline: none;
+    padding: 1em 1.3em 1em 1.3em;
+    margin-top: 2em;
+    background-color: #e0cece;
+    cursor: pointer;
+    justify-content: flex-end;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+    background-color: #ddd;
+    border: 1em #666;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+    font-size: 1em;
+    background-color: #666;
+    color: white;
 }

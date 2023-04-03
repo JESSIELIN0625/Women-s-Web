@@ -23,7 +23,6 @@ header {
     left: -10000px;
     top: auto;
     font-size: 3em;
-
 }
 
 .skip:focus {
@@ -34,7 +33,6 @@ header {
     width: auto;
     height: auto;
     font-size: 1.5em;
-
 }
 
 
@@ -150,7 +148,7 @@ a:visited {
 }
 
 nav a.current {
-    color: #c56f6f;
+    color: #a25959;
     font-weight: bold;
 }
 
@@ -473,7 +471,7 @@ img:hover {
 
 .filterDiv {
     float: left;
-    background-color: #c56f6f;
+    background-color: #8a4e4e;
     color: #ffffff;
     width: auto;
     line-height: 2em;
@@ -492,12 +490,15 @@ img:hover {
 .container a {
     text-decoration: none;
     color: #ddd;
+    font-size: 1.3em;
+    padding: 1em 1.3em 1em 1.3em;
+
 }
 
 
 /* Style the buttons */
 .btn {
-    font-size: 1em;
+    font-size: 1.3em;
     border: none;
     outline: none;
     padding: 1em 1.3em 1em 1.3em;
@@ -515,7 +516,7 @@ img:hover {
 
 /* Add a dark background to the active button */
 .btn.active {
-    font-size: 1em;
+    font-size: 1.3em;
     background-color: #666;
     color: white;
 }
